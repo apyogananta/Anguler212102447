@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">212102447</span>
     </a>
 
     <!-- Sidebar -->
@@ -13,7 +13,7 @@
           <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Alif Palguna Yogananta</a>
         </div>
       </div>
 
@@ -34,8 +34,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item has treeview {{ moduleName == 'dashboard' ? 'menu-open' : '' }} {{ moduleName == 'dashboard2' ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{ moduleName == 'dashboard' ? 'active' : '' }} {{ moduleName == 'dashboard2' ? 'active' : '' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -44,19 +44,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" class="nav-link {{ moduleName == 'dashboard' ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a [routerLink]="['/dashboard2']" routerLinkActive="router-link-active" class="nav-link {{ moduleName == 'dashboard2' ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v2</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a [routerLink]="['/dashboard3']" routerLinkActive="router-link-active" class="nav-link {{ moduleName == 'dashboard3' ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
                 </a>
@@ -64,11 +64,27 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="/mahasiswa'" class="nav-link {{ moduleName == 'mahasiswa' ? 'active' : '' }}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                Mahasiswa
                 <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/mahasiswa" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Mahasiswa (Non-Router)
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/forex']" routerLinkActive="router-link-active" class="nav-link {{ moduleName =='forex' ? 'active' : '' }}">
+              <i class="nav-icon far fa-money-bill-alt"></i>
+              <p>
+                Forex
               </p>
             </a>
           </li>

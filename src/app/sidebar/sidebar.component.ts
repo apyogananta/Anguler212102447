@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  @Input() moduleName: string = "";
+  
 }
